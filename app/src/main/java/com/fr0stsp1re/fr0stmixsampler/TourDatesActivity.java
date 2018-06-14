@@ -38,9 +38,12 @@
 
 package com.fr0stsp1re.fr0stmixsampler;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -49,23 +52,25 @@ public class TourDatesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tour_dates);
+        setContentView(R.layout.activity_info);
+
+
 
         // Create an array list and populate it
 
         ArrayList<Info> infos = new ArrayList<Info>();
 
 
-        infos.add(new Info ("one","lutti"));
-        infos.add(new Info ("two","otiiko"));
-        infos.add(new Info ("three","tolookosu"));
-        infos.add(new Info ("four","oyyisa"));
-        infos.add(new Info ("five","massokkka"));
-        infos.add(new Info("six","temmokkka"));
-        infos.add(new Info ("seven","kkenekaku"));
-        infos.add(new Info ("eight","kawinta"));
-        infos.add(new Info ("nine","wo'e"));
-        infos.add(new Info ("ten","na'aacha"));
+        infos.add(new Info ("03/25/2018","Portland Oregon"));
+        infos.add(new Info ("07/15/2018","Seattle Washington"));
+        infos.add(new Info ("07/20/2018","Vancouver BC"));
+        infos.add(new Info ("07/25/2018","Billings Montana"));
+        infos.add(new Info ("08/01/2018","Boise Idaho"));
+        infos.add(new Info("08/04/2018","Starcamp/Weed California"));
+        infos.add(new Info ("08/15/2018","San Fransisco California"));
+        infos.add(new Info ("09/11/2018","Los Angeles Califonia"));
+        infos.add(new Info ("10/01/2018","Ensenada Mexico"));
+        infos.add(new Info ("10/31/2018","Secret Location Argentina"));
 
 
 
@@ -78,5 +83,10 @@ public class TourDatesActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+
+
+
+
     }
 }

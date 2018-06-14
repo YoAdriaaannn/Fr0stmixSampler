@@ -38,14 +38,40 @@
 
 package com.fr0stsp1re.fr0stmixsampler;
 
+
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
-public class TracksActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+
+
+
+        ArrayList<Info> infos = new ArrayList<Info>();
+
+
+        infos.add(new Info ("TEST","Portland Oregon"));
+
+
+
+
+
+
+        InfoAdapter adapter = new InfoAdapter(this, infos);
+
+
+
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        listView.setAdapter(adapter);
     }
 }

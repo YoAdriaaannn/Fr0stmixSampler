@@ -46,6 +46,6 @@ public class MixesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mixes);
+        setContentView(R.layout.activity_info);
     }
 }

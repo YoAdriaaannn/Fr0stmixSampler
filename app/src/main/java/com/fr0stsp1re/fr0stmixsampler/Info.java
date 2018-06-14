@@ -38,51 +38,41 @@
 
 package com.fr0stsp1re.fr0stmixsampler;
 
-/**
 
- * {@link Word} represents a vocabulary word that the user wants to learn.
-
- * It contains a default translation and a Miwok translation for that word.
-
- */
 
 public class Info {
 
 
 
-    /** Default translation for the word */
+    // First set of info
 
-    private String mDefaultTranslation;
+    private String mDefaultInfo;
 
 
 
-    /** Miwok translation for the word */
+// Second Set of info
 
-    private String mMiwokTranslation;
+    private String mSecondInfo;
 
 
 
     /**
 
      * Create a new Info object.
+     *
 
      *
 
-     * @param defaultTranslation is the word in a language that the user is already familiar with
-
-     *                           (such as English)
-
-     * @param miwokTranslation is the word in the Miwok language
-
      */
 
-    public Info(String defaultTranslation, String miwokTranslation) {
+    public Info(String defaultInformation, String secondInfo) {
 
-        mDefaultTranslation = defaultTranslation;
+        mDefaultInfo = defaultInformation;
 
-        mMiwokTranslation = miwokTranslation;
+        mSecondInfo = secondInfo;
 
     }
+
 
 
 
@@ -92,9 +82,9 @@ public class Info {
 
      */
 
-    public String getDefaultTranslation() {
+    public String getmDefaultInfo() {
 
-        return mDefaultTranslation;
+        return mDefaultInfo;
 
     }
 
@@ -106,9 +96,9 @@ public class Info {
 
      */
 
-    public String getMiwokTranslation() {
+    public String getmSecondInfo() {
 
-        return mMiwokTranslation;
+        return mSecondInfo;
 
     }
 
