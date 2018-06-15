@@ -44,5 +44,10 @@
     <dimen name="activity_vertical_margin">8dp</dimen>
     <dimen name="standard_padding">8dp</dimen>
     <dimen name="med_padding">16dp</dimen>
-
+    <dimen name="headerText">16sp</dimen>
+    <dimen name="textMedium">12sp</dimen>
+    <dimen name="textStandard">16sp</dimen>
+    <dimen name="extraPadding">16dp</dimen>
+    <dimen name="medHeight">30dp</dimen>
+    <dimen name="smallPadding">4dp</dimen>
 </resources>

@@ -1,120 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <RelativeLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
     <ImageView
         android:id="@+id/header_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentTop="true"
         android:background="@drawable/tech1200"
         android:scaleType="centerCrop" />
 
-
     <TextView
         android:id="@+id/header_title"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
         android:layout_marginTop="@dimen/activity_horizontal_margin_extended_1"
-
         android:background="@color/colorTransWin"
         android:padding="@dimen/standard_padding"
-        android:text="DJ. Fr0stsp1re"
+        android:text="@string/dj_fr0stsp1re"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp" />
+        android:textSize="@dimen/headerText" />
 
     <TextView
         android:id="@+id/header_sub_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
         android:layout_below="@id/header_title"
-
         android:background="@color/colorAccentTrans"
         android:padding="@dimen/standard_padding"
-        android:text="Music Promo Sampler"
+        android:text="@string/music_promo_sampler"
         android:textAllCaps="true"
         android:textColor="@color/colorTransWin"
-        android:textSize="6sp" />
-    <!-- Begin scroll view for detailed business description !-->
+        android:textSize="@dimen/textMedium" />
+
+    <!-- Begin scroll view for navigation !-->
     <LinearLayout
-        android:id="@+id/company_info_deep"
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header_image"
-
         >
 
         <TextView
             android:id="@+id/mixes"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="@dimen/medHeight"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
             android:gravity="center"
-            android:text="Mixes"
-
+            android:text="@string/mixes"
             />
 
         <TextView
             android:id="@+id/tracks"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="@dimen/medHeight"
             android:layout_weight="1"
             android:background="@color/colorAccent"
             android:gravity="center"
-            android:text="Tracks" />
+            android:text="@string/tracks" />
 
         <TextView
             android:id="@+id/tour_dates"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="@dimen/medHeight"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:text="Tour Dates"
-
+            android:text="@string/tour_dates"
             />
-
-
-
     </LinearLayout>
 
     <!-- Begin layout for business information and icons !-->
-
     <RelativeLayout
         android:id="@+id/sub_layout"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        android:layout_below="@id/company_info_deep"
+        android:layout_below="@id/navigation"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:padding="@dimen/standard_padding">
 
         <ImageView
-
             android:id="@+id/business_address"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:background="@drawable/ic_business_black_24dp"
@@ -127,16 +103,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
-
             android:layout_toRightOf="@id/business_address"
             android:autoLink="map"
-            android:padding="4sp"
-            android:text="808 303 St Suite 909 | Portland Oregon 97001"
-            android:textSize="10dp" />
+            android:padding="@dimen/smallPadding"
+            android:text="@string/_808_303_st_suite_909_portland_oregon_97001"
+            android:textSize="10sp" />
 
 
         <ImageView
-
             android:id="@+id/company_phone_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -150,25 +124,20 @@
             android:id="@+id/textView_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-
             android:layout_below="@id/textView_business_address"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:layout_toRightOf="@id/company_phone_icon"
             android:autoLink="phone"
-            android:padding="4sp"
-
-            android:text="(503) 555 - 1212"
+            android:padding="@dimen/smallPadding"
+            android:text="@string/_503_555_1212"
             android:textSize="10dp" />
 
         <ImageView
-
             android:id="@+id/company_web_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/company_phone_icon"
-
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:background="@drawable/ic_public_black_24dp"
             android:backgroundTint="@color/colorAccent" />
@@ -179,18 +148,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/company_phone_icon"
-
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:layout_toRightOf="@id/company_web_icon"
             android:autoLink="web"
-            android:padding="4sp"
-            android:text="https://www.waxrecords.com"
-            android:textSize="10dp" />
+            android:padding="@dimen/smallPadding"
+            android:text="@string/https_www_waxrecords_com"
+            android:textSize="10sp" />
 
 
         <ImageView
-
             android:id="@+id/company_email_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -204,21 +171,18 @@
             android:id="@+id/textView_email_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_below="@id/textView_web_link"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:layout_toRightOf="@id/company_email_icon"
             android:autoLink="email"
-            android:padding="4sp"
-            android:text="info@waxrecords.com"
-            android:textSize="10dp" />
+            android:padding="@dimen/smallPadding"
+            android:text="@string/info_waxrecords_com"
+            android:textSize="10sp" />
 
         <ImageView
-
             android:id="@+id/company_social_icon"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:layout_below="@id/company_email_icon"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
@@ -231,56 +195,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textView_email_link"
-
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:layout_toRightOf="@id/company_social_icon"
             android:autoLink="all"
-            android:padding="4sp"
-            android:text="https://facebook.com/waxrecords"
-            android:textSize="10dp" />
-
+            android:padding="@dimen/smallPadding"
+            android:text="@string/https_facebook_com_waxrecords"
+            android:textSize="10sp" />
 
     </RelativeLayout>
 
-
 </RelativeLayout>
 
-    <!--
-      ~ Copyright (c) 2018.  Adrian Raff AKA Fr0stsp1re
-      ~ *************PROJECT LICENSE*************
-      ~
-      ~ This project was submitted by Adrian Raff as part of the  Android Basics Nanodegree At Udacity.
-      ~
-      ~ The Udacity Honor code requires your submissions must be your own work.
-      ~ Submitting this project as yours will cause you to break the Udacity Honor Code
-      ~ and may result in disiplinary action.
-      ~
-      ~ The author of this project allows you to check the code as a reference only. You may not submit this project or any part
-      ~ of the code as your own.
-      ~
-      ~ Besides the above notice, the following license applies and this license notice
-      ~ must be included in all works derived from this project.
-      ~
-      ~ MIT License
-      ~
-      ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-      ~ of this software and associated documentation files (the "Software"), to deal
-      ~ in the Software without restriction, including without limitation the rights
-      ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-      ~ copies of the Software, and to permit persons to whom the Software is
-      ~ furnished to do so, subject to the following conditions:
-      ~
-      ~ The above copyright notice and this permission notice shall be included in all
-      ~ copies or substantial portions of the Software.
-      ~
-      ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-      ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-      ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-      ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-      ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-      ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-      ~ SOFTWARE.
-      ~
-      -->
 

@@ -45,14 +45,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
-
+// This activity holds single tracks
 public class TracksActivity extends AppCompatActivity {
 
     // Creates keys for ListView item data
     public static final String ID_SONG = "SONG";
     public static final String ID_ALBUM = "ALBUM";
     public static final int ID_ART = R.drawable.baseline_open_in_new_black_18;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +62,7 @@ public class TracksActivity extends AppCompatActivity {
         ArrayList<Song> songs = new ArrayList<Song>();
 
         songs.add(new Song("Alien Caravan", "Eurythmia", R.drawable.alb1));
-        songs.add(new Song("Planet Of Pleasure", "Aurora", R.drawable.alb2));
+        songs.add(new Song("Phat Planet", "Aurora", R.drawable.alb2));
         songs.add(new Song("Bad Trip", "WTF LOL", R.drawable.alb3));
         songs.add(new Song("Sonic Meltdown", "Reflexion", R.drawable.alb4));
         songs.add(new Song("My Name Is Jack", "OMG WTF", R.drawable.alb5));

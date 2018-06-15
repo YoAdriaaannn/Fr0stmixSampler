@@ -12,9 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Set onClickListeners for navigation
         TextView mixes = (TextView) findViewById(R.id.mixes);
-
-        // Set onClickListeners
         mixes.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView tourDates = (TextView) findViewById(R.id.tour_dates);
-
         tourDates.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView tracks = (TextView) findViewById(R.id.tracks);
-
         tracks.setOnClickListener(new View.OnClickListener(){
             @Override
                     public void onClick(View view){

@@ -40,6 +40,7 @@ package com.fr0stsp1re.fr0stmixsampler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 
 public class TourDatesActivity extends AppCompatActivity {
@@ -52,20 +53,20 @@ public class TourDatesActivity extends AppCompatActivity {
         // Create an array list and populate it
         ArrayList<Info> infos = new ArrayList<Info>();
 
-        infos.add(new Info ("03/25/2018","Portland Oregon", "At the Liquor Store on Belmont", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("07/15/2018","Seattle Washington", "The Green Room. 21+," ,R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("07/20/2018","Vancouver BC", "Some Canadian Bar.", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("07/25/2018","Billings Montana", "Road Kill Cafe", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("08/01/2018","Boise Idaho", "Spudland Dance Hall", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info("08/04/2018","Starcamp/Weed California", "MT SHasta California. Outdoor Venue", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("08/15/2018","San Fransisco California","Pulse SF", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("09/11/2018","Los Angeles Califonia", "Perversions. 3 shows!", R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("10/01/2018","Ensenada Mexico", "South of the border fun on the Beach!" ,R.drawable.baseline_open_in_new_black_18));
-        infos.add(new Info ("10/31/2018","Secret Location Argentina","A secret appearance at a location to be disclosed day of event.", R.drawable.baseline_open_in_new_black_18));
+        infos.add(new Info("03/25/2018", "Portland Oregon"));
+        infos.add(new Info("07/15/2018", "Seattle Washington"));
+        infos.add(new Info("07/20/2018", "Vancouver BC"));
+        infos.add(new Info("07/25/2018", "Billings Montana"));
+        infos.add(new Info("08/01/2018", "Boise Idaho"));
+        infos.add(new Info("08/04/2018", "Starcamp/Weed California"));
+        infos.add(new Info("08/15/2018", "San Fransisco California"));
+        infos.add(new Info("09/11/2018", "Los Angeles Califonia"));
+        infos.add(new Info("10/01/2018", "Ensenada Mexico"));
+        infos.add(new Info("10/31/2018", "Secret Location Argentina"));
 
-
+        // Set up the adapter
         InfoAdapter adapter = new InfoAdapter(this, infos);
-
+        // Set listview to contents of adapter
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
     }

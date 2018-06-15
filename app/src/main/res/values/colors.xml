@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <color name="colorPrimary">#fe503c</color>
     <color name="colorPrimaryDark">#fe1b00</color>
     <color name="colorAccent">#f98173</color>
-    <color name="colorTransWin">#9f000000</color>
-    <color name="colorAccentTrans">#c5ff8a80</color>
+    <color name="colorTransWin">#82000000</color>
+    <color name="colorAccentTrans">#92ff8a80</color>
 
 </resources>

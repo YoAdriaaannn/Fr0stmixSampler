@@ -43,7 +43,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
-
+// This activity holds mixes
 public class MixesActivity extends AppCompatActivity {
 
     // Creates keys for ListView item data

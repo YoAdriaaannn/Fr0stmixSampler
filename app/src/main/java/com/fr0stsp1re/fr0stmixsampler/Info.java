@@ -37,6 +37,7 @@
  */
 package com.fr0stsp1re.fr0stmixsampler;
 
+// Class for general information such as tour dates. Uses two strings.
 public class Info {
 
     // First set of info
@@ -45,20 +46,12 @@ public class Info {
     // Second Set of info
     private String mSecondInfo;
 
-    // Third set of info
-    private String mThirdInfo;
-
-    // Drawable resource ID
-    private int mImageResourceId;
-
     // New info object starts here
-    public Info(String defaultInformation, String secondInfo, String thirdInfo, int imageResourceId) {
+    public Info(String defaultInformation, String secondInfo) {
 
         //Grab passed arguments
         mDefaultInfo = defaultInformation;
         mSecondInfo = secondInfo;
-        mImageResourceId = imageResourceId;
-        mThirdInfo = thirdInfo;
     }
 
     // first info set
@@ -75,17 +68,4 @@ public class Info {
 
     }
 
-    // Third info set
-    public String getmThirdInfo() {
-
-        return mThirdInfo;
-
-    }
-
-    //Image set
-    public int getImageResourceId() {
-
-        return mImageResourceId;
-
-    }
 }

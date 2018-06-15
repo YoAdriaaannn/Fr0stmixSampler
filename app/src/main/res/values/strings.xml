@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Fr0stmixSampler</string>
+    <string name="app_name">Fr0stmix Sampler</string>
+    <string name="mixes">Mixes</string>
+    <string name="tracks">Tracks</string>
+    <string name="tour_dates">Tour Dates</string>
+    <string name="dj_fr0stsp1re">DJ. Fr0stsp1re</string>
+    <string name="music_promo_sampler">Music Promo Sampler</string>
+    <string name="background_picture_of_1200s">Background Picture Of 1200s</string>
+    <string name="title_activity_tour_date_detail">TourDateDetail</string>
+    <string name="_808_303_st_suite_909_portland_oregon_97001">808 303 St Suite 909 | Portland Oregon 97001</string>
+    <string name="_503_555_1212">(503) 555 - 1212</string>
+    <string name="https_www_waxrecords_com">https://www.waxrecords.com</string>
+    <string name="info_waxrecords_com">info@waxrecords.com</string>
+    <string name="https_facebook_com_waxrecords">https://facebook.com/dj.fr0stsp1re</string>
 </resources>

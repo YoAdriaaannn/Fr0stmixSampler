@@ -16,11 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TourDatesActivity" />
-        <activity android:name=".TracksActivity" />
-
+        <activity
+            android:name=".TourDatesActivity"
+            android:label="DJ. Fr0stsp1re Tour Dates" />
+        <activity
+            android:name=".TracksActivity"
+            android:label="Individual Tracks" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".MixesActivity"></activity>
+        <activity
+            android:name=".MixesActivity"
+            android:label="DJ. Fr0stsp1re Mixes 2015-2018" />
     </application>
 
 </manifest>

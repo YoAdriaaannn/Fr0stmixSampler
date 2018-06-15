@@ -37,14 +37,14 @@
   ~
   -->
 
+<!-- The master layout for displaying information on what is now playing. Used as wall to wall background-->
 <FrameLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/tech1200"
     >
-
+    <!-- Include the layout for the listview  -->
     <include layout="@layout/info_now_playing"></include>
-
 
 </FrameLayout>

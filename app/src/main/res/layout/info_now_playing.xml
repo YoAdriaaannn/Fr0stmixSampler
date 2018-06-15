@@ -37,28 +37,25 @@
   ~
   -->
 
-
+<!-- Scroll view wrapper -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+   android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-
-
+    <!-- Relative layout for positioning -->
     <RelativeLayout
         android:id="@+id/root_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
         <ImageView
             android:layout_height="300dp"
             android:layout_width="300dp"
             android:padding="8dp"
-         android:layout_centerHorizontal="true"
-
+            android:contentDescription="@string/background_picture_of_1200s"
+             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:id="@+id/album_art"/>
 
@@ -67,27 +64,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:padding="16dp"
+            android:padding="@dimen/extraPadding"
             android:textAllCaps="true"
             android:layout_below="@+id/album_art"
             android:background="@color/colorTransWin"
             android:textColor="@color/colorAccent"
-            android:textSize="16sp"/>
+            android:textSize="@dimen/textStandard"/>
 
         <TextView
             android:id="@+id/playing_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
             android:background="@color/colorAccentTrans"
             android:padding="@dimen/standard_padding"
-            android:text="Music Promo Sampler"
+            android:text="@string/music_promo_sampler"
             android:layout_below="@+id/playing_album"
             android:textAllCaps="true"
             android:textColor="@color/colorTransWin"
-            android:textSize="6sp" />
+            android:textSize="@dimen/textMedium" />
 
+        <!-- player controls-->
         <LinearLayout
             android:id="@+id/control_view"
             android:layout_width="match_parent"
@@ -95,16 +91,15 @@
             android:orientation="horizontal"
             android:padding="8dp"
             android:layout_below="@+id/playing_song"
-
             android:background="@color/colorTransWin">
 
+            <!-- player controls -->
             <ImageView
                 android:id="@+id/control_rev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:cropToPadding="true"
-
                 android:background="@drawable/baseline_skip_previous_white_24"/>
 
             <ImageView
@@ -113,9 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:cropToPadding="true"
-
                 android:background="@drawable/baseline_pause_white_24"/>
-
 
             <ImageView
                 android:id="@+id/control_play"
@@ -133,7 +126,45 @@
                 android:cropToPadding="true"
                 android:background="@drawable/baseline_skip_next_white_24"/>
 
+        </LinearLayout>
 
+        <!-- Begin scroll view for navigation !-->
+        <LinearLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/control_view"
+            android:gravity="bottom"
+            >
+
+            <TextView
+                android:id="@+id/mixes"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/medHeight"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:text="@string/mixes"
+                />
+
+            <TextView
+                android:id="@+id/tracks"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/medHeight"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/tracks" />
+
+            <TextView
+                android:id="@+id/tour_dates"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/medHeight"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/tour_dates"
+                />
         </LinearLayout>
 
     </RelativeLayout>

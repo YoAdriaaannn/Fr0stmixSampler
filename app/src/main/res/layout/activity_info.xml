@@ -36,15 +36,14 @@
   ~ SOFTWARE.
   ~
   -->
-
+<!-- This master layout is for displaying tour date information. Used as a wal to wall background -->
 <FrameLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/tech1200"
     >
-
+    <!-- Include the list view -->
     <include layout="@layout/info_list"></include>
-
 
 </FrameLayout>
