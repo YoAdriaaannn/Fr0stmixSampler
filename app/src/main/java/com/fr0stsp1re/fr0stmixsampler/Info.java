@@ -35,16 +35,12 @@
  * SOFTWARE.
  *
  */
-
 package com.fr0stsp1re.fr0stmixsampler;
-
 
 public class Info {
 
-
     // First set of info
     private String mDefaultInfo;
-
 
     // Second Set of info
     private String mSecondInfo;
@@ -55,7 +51,6 @@ public class Info {
     // Drawable resource ID
     private int mImageResourceId;
 
-
     // New info object starts here
     public Info(String defaultInformation, String secondInfo, String thirdInfo, int imageResourceId) {
 
@@ -64,7 +59,6 @@ public class Info {
         mSecondInfo = secondInfo;
         mImageResourceId = imageResourceId;
         mThirdInfo = thirdInfo;
-
     }
 
     // first info set
@@ -94,5 +88,4 @@ public class Info {
         return mImageResourceId;
 
     }
-
 }

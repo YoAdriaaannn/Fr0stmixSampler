@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".TourDatesActivity" />
         <activity android:name=".TracksActivity" />
-        <activity android:name=".AlbumsActivity" />
 
         <activity android:name=".DetailActivity" />
         <activity android:name=".MixesActivity"></activity>

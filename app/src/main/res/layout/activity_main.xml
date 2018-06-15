@@ -67,20 +67,9 @@
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:text="Mixes"
-            android:gravity="center"
             android:background="@color/colorPrimaryDark"
-
-            />
-
-        <TextView
-            android:id="@+id/tour_dates"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:text="Tour Dates"
             android:gravity="center"
-            android:background="@color/colorPrimary"
+            android:text="Mixes"
 
             />
 
@@ -89,22 +78,22 @@
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:text="Tracks"
+            android:background="@color/colorAccent"
             android:gravity="center"
-android:background="@color/colorAccent"
-            />
-
+            android:text="Tracks" />
 
         <TextView
-            android:id="@+id/albums"
+            android:id="@+id/tour_dates"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-          android:background="@color/colorPrimary"
-            android:text="Albums"
+            android:background="@color/colorPrimary"
             android:gravity="center"
+            android:text="Tour Dates"
 
             />
+
+
 
     </LinearLayout>
 

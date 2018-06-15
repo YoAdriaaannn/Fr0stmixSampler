@@ -39,7 +39,6 @@
 package com.fr0stsp1re.fr0stmixsampler;
 
 public class Song {
-
     //Set up variables to hold song/album and image data
     private String mSongName;
     private String mAlbumName;
@@ -72,5 +71,4 @@ public class Song {
         return mImageResourceId;
 
     }
-
 }

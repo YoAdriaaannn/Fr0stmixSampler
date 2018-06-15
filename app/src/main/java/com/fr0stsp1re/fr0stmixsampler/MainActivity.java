@@ -1,6 +1,4 @@
 package com.fr0stsp1re.fr0stmixsampler;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,27 +12,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
         TextView mixes = (TextView) findViewById(R.id.mixes);
 
-        // Set a click listener on that View
+        // Set onClickListeners
         mixes.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MixesActivity.class);
-                startActivity(i);
-            }
-        });
-
-
-
-        TextView albums = (TextView) findViewById(R.id.albums);
-
-        // Set a click listener on that View
-        albums.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
@@ -53,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         TextView tracks = (TextView) findViewById(R.id.tracks);
 
         tracks.setOnClickListener(new View.OnClickListener(){
@@ -64,9 +43,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
-
     }
 }

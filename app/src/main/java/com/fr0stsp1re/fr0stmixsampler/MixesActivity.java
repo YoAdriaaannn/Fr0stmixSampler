@@ -35,17 +35,55 @@
  * SOFTWARE.
  *
  */
-
 package com.fr0stsp1re.fr0stmixsampler;
-
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import java.util.ArrayList;
 
 public class MixesActivity extends AppCompatActivity {
+
+    // Creates keys for ListView item data
+    public static final String ID_SONG = "SONG";
+    public static final String ID_ALBUM = "ALBUM";
+    public static final int ID_ART = R.drawable.baseline_open_in_new_black_18;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+        // Create an array list and populate it
+        ArrayList<Song> songs = new ArrayList<Song>();
+
+        songs.add(new Song("Psytrance", "Ermuhgerd2", R.drawable.erma));
+        songs.add(new Song("Psytrance", "Most Aweful Mix", R.drawable.lemon));
+        songs.add(new Song("Psytrip", "Mothership Summoning", R.drawable.mothership));
+        songs.add(new Song("Prog PSy", "Niramur", R.drawable.starcamp));
+        songs.add(new Song("Dark Psy", "Area51", R.drawable.area51));
+        songs.add(new Song("Psytrance", "Charge Da Lazerz", R.drawable.lazers));
+        songs.add(new Song("Techno", "Ice Cold Techno", R.drawable.icecold));
+
+        SongAdapter adapter = new SongAdapter(this, songs);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+        // Set on click listener for list view to send user to detail info activity and player.
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View v, int position, long id){
+                Song selectedItem = (Song) adapter.getItemAtPosition(position);
+
+                Intent playSelected = new Intent(MixesActivity.this,DetailActivity.class);
+
+                // Set variables to send with intent to rec at detail activity
+                playSelected.putExtra(ID_SONG, selectedItem.getmSongName());
+                playSelected.putExtra(ID_ALBUM, selectedItem.getmAlbumName());
+                playSelected.putExtra("ID_ART", selectedItem.getImageResourceId());
+                startActivity(playSelected);
+            }
+        });
     }
 }
