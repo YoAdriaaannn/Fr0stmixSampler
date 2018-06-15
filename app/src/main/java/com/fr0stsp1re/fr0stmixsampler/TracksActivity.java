@@ -38,14 +38,72 @@
 
 package com.fr0stsp1re.fr0stmixsampler;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class TracksActivity extends AppCompatActivity {
+
+    // Creates keys for ListView item data
+
+    public static final String ID_SONG = "SONG";
+
+    public static final String ID_ALBUM = "ALBUM";
+
+    public static final int ID_ART = R.drawable.baseline_open_in_new_black_18;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+
+        // Create an array list and populate it
+        ArrayList<Song> songs = new ArrayList<Song>();
+
+        songs.add(new Song("Alien Caravan", "Portland Oregon", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("Planet Of Pleasure", "Seattle Washington", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("Bad Trip", "Vancouver BC", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("Sonic Meltdown", "Billings Montana", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("My Name Is Jack", "Boise Idaho", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("08/04/2018", "Starcamp/Weed California", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("08/15/2018", "San Fransisco California", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("09/11/2018", "Los Angeles Califonia", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("10/01/2018", "Ensenada Mexico", R.drawable.baseline_open_in_new_black_18));
+        songs.add(new Song("10/31/2018", "Secret Location Argentina", R.drawable.baseline_open_in_new_black_18));
+
+        SongAdapter adapter = new SongAdapter(this, songs);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View v, int position, long id){
+                Song selectedItem = (Song) adapter.getItemAtPosition(position);
+
+                Intent playSelected = new Intent(TracksActivity.this,DetailActivity.class);
+
+
+
+
+
+                playSelected.putExtra(ID_SONG, selectedItem.getmSongName());
+
+                playSelected.putExtra(ID_ALBUM, selectedItem.getmAlbumName());
+
+                playSelected.putExtra("ID_ART", selectedItem.getImageResourceId());
+                startActivity(playSelected);
+            }
+        });
+
+
     }
 }
+

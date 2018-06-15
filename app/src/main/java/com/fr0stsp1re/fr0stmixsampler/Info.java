@@ -39,69 +39,60 @@
 package com.fr0stsp1re.fr0stmixsampler;
 
 
-
 public class Info {
 
 
-
     // First set of info
-
     private String mDefaultInfo;
 
 
-
-// Second Set of info
-
+    // Second Set of info
     private String mSecondInfo;
 
+    // Third set of info
+    private String mThirdInfo;
+
+    // Drawable resource ID
+    private int mImageResourceId;
 
 
-    /**
+    // New info object starts here
+    public Info(String defaultInformation, String secondInfo, String thirdInfo, int imageResourceId) {
 
-     * Create a new Info object.
-     *
-
-     *
-
-     */
-
-    public Info(String defaultInformation, String secondInfo) {
-
+        //Grab passed arguments
         mDefaultInfo = defaultInformation;
-
         mSecondInfo = secondInfo;
+        mImageResourceId = imageResourceId;
+        mThirdInfo = thirdInfo;
 
     }
 
-
-
-
-    /**
-
-     * Get the default translation of the word.
-
-     */
-
+    // first info set
     public String getmDefaultInfo() {
 
         return mDefaultInfo;
 
     }
 
-
-
-    /**
-
-     * Get the Miwok translation of the word.
-
-     */
-
+    // Second info set
     public String getmSecondInfo() {
 
         return mSecondInfo;
 
     }
 
+    // Third info set
+    public String getmThirdInfo() {
 
+        return mThirdInfo;
+
+    }
+
+    //Image set
+    public int getImageResourceId() {
+
+        return mImageResourceId;
+
+    }
 
 }

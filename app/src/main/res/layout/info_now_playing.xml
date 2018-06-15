@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Copyright (c) 2018.  Adrian Raff AKA Fr0stsp1re
   ~ *************PROJECT LICENSE*************
   ~
@@ -36,56 +37,54 @@
   ~
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/default_textview"
-        android:layout_width="0dp"
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/colorAccentTrans"
-
-        android:padding="16dp" />
-
-    <TextView
-        android:id="@+id/info2_textview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:background="@color/colorPrimary"
-
-        android:padding="16dp"
-
-        />
+        android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/info3_textview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:background="@color/colorAccentTrans"
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/album_art"></ImageView>
 
-        android:padding="16dp"
+        <TextView
+            android:id="@+id/playing_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:background="@color/colorTransWin"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"/>
 
-        />
+        <TextView
+            android:id="@+id/playing_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <ImageView
-        android:id="@+id/image_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:background="@color/colorAccentTrans"
+            android:padding="@dimen/standard_padding"
+            android:text="Music Promo Sampler"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTransWin"
+            android:textSize="6sp" />
 
-        android:padding="8dp"
+    </LinearLayout>
 
-        />
-
-
-
-
-</LinearLayout>
+</ScrollView>

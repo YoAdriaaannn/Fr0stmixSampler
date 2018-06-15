@@ -38,65 +38,39 @@
 
 package com.fr0stsp1re.fr0stmixsampler;
 
+public class Song {
 
+    //Set up variables to hold song/album and image data
+    private String mSongName;
+    private String mAlbumName;
+    private int mImageResourceId;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+    // Create Song object
+    public Song(String songName, String albumName, int imageResourceId) {
+        mSongName = songName;
+        mAlbumName = albumName;
+        mImageResourceId = imageResourceId;
+    }
 
+    // Get song name
+    public String getmSongName() {
 
-import static com.fr0stsp1re.fr0stmixsampler.TracksActivity.ID_ALBUM;
-import static com.fr0stsp1re.fr0stmixsampler.TracksActivity.ID_SONG;
-import static com.fr0stsp1re.fr0stmixsampler.TracksActivity.ID_ART;
-
-
-import java.util.ArrayList;
-
-public class DetailActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-
-        // String vars to hold passed track info
-        String nowSong = "", nowAlbum = "";
-
-        // int to hold res id for drawables
-        int nowPlayArt = 0;
-
-
-
-
-        // Gets intent and ListView item data from selected adapter
-
-        Intent intent = getIntent();
-        if (null != intent) {
-
-            nowSong = intent.getStringExtra(ID_SONG);
-            nowAlbum = intent.getStringExtra(ID_ALBUM);
-            nowPlayArt = intent.getIntExtra("ID_ART", 0);
-
-        }
-
-
-
-        // Sets data to appropriate TextViews
-        TextView playingSongText = (TextView) findViewById(R.id.playing_song);
-        playingSongText.setText(nowSong);
-
-        TextView playingAlbumText = (TextView) findViewById(R.id.playing_album);
-        playingAlbumText.setText(nowAlbum);
-
-        // Set album art
-        ImageView playingAlbumArt = (ImageView) findViewById(R.id.album_art);
-            playingAlbumArt.setImageResource(nowPlayArt);
-
-
-
+        return mSongName;
 
     }
+
+    // Get album name
+    public String getmAlbumName() {
+
+        return mAlbumName;
+
+    }
+
+    // Get image for album art
+    public int getImageResourceId() {
+
+        return mImageResourceId;
+
+    }
+
 }
